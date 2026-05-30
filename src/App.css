@@ -1,0 +1,178 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+}
+
+.app > * {
+  max-width: 480px;
+  width: 100%;
+}
+
+/* شريط البحث */
+.search-bar {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  animation: scaleIn 0.4s ease;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.85rem 1.2rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.search-bar input:focus {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.search-bar button {
+  padding: 0.85rem 1.5rem;
+  border-radius: 14px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.05);
+}
+
+/* رسالة الخطأ */
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  animation: scaleIn 0.3s ease;
+}
+
+/* بطاقة الطقس */
+.weather-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 24px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  width: 100%;
+  animation: scaleBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.weather-card h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.5rem;
+}
+
+.weather-card img {
+  width: 90px;
+  height: 90px;
+}
+
+.weather-card h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: -2px;
+}
+
+.weather-card p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  text-transform: capitalize;
+  margin-top: 0.25rem;
+}
+
+/* تفاصيل الطقس */
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  animation: scaleBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.detail {
+  flex: 1;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 1.2rem;
+  text-align: center;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.detail:hover {
+  transform: scale(1.04);
+}
+
+.detail p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.4rem;
+}
+
+.detail h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* الحركات */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleBounce {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
