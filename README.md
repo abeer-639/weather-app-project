@@ -3,7 +3,7 @@
 A React weather application that shows real-time weather data.
 
 ## Live Demo
-[View Live]    
+[View Live]    https://appweatherbyabeer.netlify.app/
 
 ## Features
 - Search weather by city
