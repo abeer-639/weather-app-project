@@ -1,7 +1,7 @@
 import { useState } from "react"
-import SearchBar from "./components/SearchBar"
-import WeatherCard from "./components/WeatherCard"
-import WeatherDetails from "./components/WeatherDetails"
+import SearchBar from "./Components/SearchBar"
+import WeatherCard from "./Components/WeatherCard"
+import WeatherDetails from "./Components/WeatherDetails"
 import "./App.css"
 
 
