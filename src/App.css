@@ -176,3 +176,28 @@ body {
     transform: scale(1);
   }
 }
+@media (max-width: 480px) {
+  .app {
+    padding: 1.2rem;
+  }
+
+  .weather-card {
+    padding: 1.5rem;
+  }
+
+  .weather-card h1 {
+    font-size: 3rem;
+  }
+
+  .weather-details {
+    flex-direction: column;
+  }
+
+  .detail {
+    width: 100%;
+  }
+
+  .search-bar input {
+    font-size: 0.9rem;
+  }
+}
